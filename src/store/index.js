@@ -82,5 +82,4 @@ export const store = createStore(reducer, initialState);
 
 store.subscribe(() => {
   localStorage.setItem("users", JSON.stringify(store.getState()));
-  console.log(JSON.parse(localStorage.getItem("users")))
 });

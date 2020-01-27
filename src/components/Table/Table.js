@@ -9,7 +9,7 @@ function Table({ listUser: users, deleteUser }) {
   useEffect(() => {
     setUsersSorted(users);
   }, [users, usersSorted]);
-  console.log(usersSorted);
+  
   return (
     <table className="shadow p-3 mb-5 bg-white rounded table table-hover">
       <thead className="thead-dark">
