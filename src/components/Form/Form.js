@@ -35,7 +35,7 @@ const Form = ({listUser, addListUser}) => {
   };
 
   return (
-    <form className={"container w-50 p-20 shadow p-3 mb-5 bg-white rounded form-horizontal"}>
+    <form className={"container w-75 p-20 shadow p-3 bg-white rounded form-horizontal"}>
       <Input
         value={firstName}
         setDataForm={data => setFirstName(data)}

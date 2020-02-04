@@ -4,12 +4,12 @@ import PropTypes from "prop-types";
 import sortUsers from "./sortUsers";
 
 function Table({ listUser: users, deleteUser }) {
-  const [usersSorted, setUsersSorted] = useState(users);
+  const [usersSorted, setUsersSorted] = useState([]);
 
   useEffect(() => {
     setUsersSorted(users);
   }, [users, usersSorted]);
-  
+
   return (
     <table className="shadow p-3 mb-5 bg-white rounded table table-hover">
       <thead className="thead-dark">
