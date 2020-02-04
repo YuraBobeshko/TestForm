@@ -5,7 +5,6 @@ import { store } from "./store/index";
 import Modal from "./components/modal/Modal";
 import { Table } from "./components/Table/index";
 import { Form } from "./components/Form/index";
-import "./App.css";
 
 function App() {
   const [isOpenForm, setIsOpenForm] = useState(false);
