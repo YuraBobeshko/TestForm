@@ -49,7 +49,7 @@ function Table({ listUser: users, deleteUser }) {
               <td>{lastName}</td>
               <td>{number}</td>
               <td>{age}</td>
-              <td>{gender.toString()}</td>
+              <td>{gender ? 'man' : 'woman'}</td>
               <td className={"text-danger btn"} onClick={() => deleteUser(id)}>
                 delete
               </td>

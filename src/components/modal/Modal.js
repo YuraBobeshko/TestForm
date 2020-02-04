@@ -1,34 +1,31 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
-import Portal from '../portal/Portal';
+import Portal from "../portal/Portal";
 
-import './Modal.css';
-
-const Modal = ({
-  title, isOpen, onCancel, onSubmit, children,
-}) => {
-
+const Modal = ({ title, isOpen, onCancel, onSubmit, children }) => {
   return (
     <>
-      { isOpen &&
-        <Portal>
-          <div className="modalOverlay">
-            <div className="modalWindow">
+      {isOpen && (
+        <Portal className={"modalOverlay"}>
+          <div className="modal-dialog">
+            <div className="modal-content">
               <div className="modal-header">
-                <div className="modal-title">{title}</div>
-                <button className={'btn btn-danger'} name="times" onClick={onCancel}>X</button>
+                <p className="modal-title h2">{title}</p>
+                <button className={"btn btn-danger"} onClick={onCancel}>
+                  X
+                </button>
               </div>
-              <div className="modal-body">
-                {children}
-              </div>
+              <div className="modal-body">{children}</div>
               <div className="modal-footer">
-                <button className={'btn btn-danger'} onClick={onCancel} invert>Cancel</button>
+                <button className={"btn btn-danger"} onClick={onCancel}>
+                  Cancel
+                </button>
               </div>
             </div>
           </div>
         </Portal>
-      }
+      )}
     </>
   );
 };
@@ -38,15 +35,15 @@ Modal.propTypes = {
   isOpen: PropTypes.bool,
   onCancel: PropTypes.func,
   onSubmit: PropTypes.func,
-  children: PropTypes.node,
+  children: PropTypes.node
 };
 
 Modal.defaultProps = {
-  title: 'Modal title',
+  title: "Modal title",
   isOpen: false,
   onCancel: () => {},
   onSubmit: () => {},
-  children: null,
+  children: null
 };
 
 export default Modal;

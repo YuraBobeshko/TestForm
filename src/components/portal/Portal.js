@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import ReactDOM from "react-dom";
 
-function Portal({ children }) {
+import "./Modal.css";
+
+function Portal({ children, className }) {
   const el = document.createElement("div");
+  el.className = className || "";
 
   useEffect(() => {
     document.body.appendChild(el);
